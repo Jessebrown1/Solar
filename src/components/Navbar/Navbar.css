@@ -1,0 +1,196 @@
+.navbar {
+  color: white;
+  padding: 1rem 2rem;
+  position: fixed;  /* change from absolute to fixed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;   /* higher so it stays above other content */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.3s ease;
+}
+
+
+/* Container */
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Logo */
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.logo span {
+  color: #d4f1be; /* subtle green accent */
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.nav-links a:hover {
+  color: #d4f1be;
+  transform: translateY(-2px);
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown Toggle */
+.dropdown-toggle {
+  background: none;
+  border: none;
+  color: white; /* same as links */
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.dropdown-toggle:hover {
+  color: #d4f1be;
+  transform: translateY(-2px);
+}
+
+/* Make it behave like nav link in mobile menu */
+@media (max-width: 768px) {
+  .dropdown-toggle {
+    color: white;
+    font-size: 1.1rem;
+  }
+}
+
+
+.dropdown-menu {
+  position: absolute;
+  top: 2.5rem;
+  left: 0;
+  min-width: 150px;
+  background: rgba(40, 167, 69, 0.9); /* semi-transparent green */
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: white;
+}
+
+.dropdown-menu a:hover {
+  background: rgba(13, 110, 253, 0.9); /* semi-transparent blue */
+}
+
+/* Mobile Menu Icon */
+.mobile-menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: white;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .mobile-menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;          /* cover the whole screen */
+    inset: 0;                 /* top:0; right:0; bottom:0; left:0; */
+    background: rgba(0, 0, 0, 0.85); /* semi-transparent dark overlay */
+    z-index: 200;             /* on top of everything */
+    gap: 2rem;
+    font-size: 1.5rem;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+/* Mobile nav links overlay */
+.nav-links.active {
+  display: flex;
+  flex-direction: column;
+  position: fixed;           /* full screen overlay */
+  inset: 0;                  /* top:0; left:0; right:0; bottom:0 */
+  background: rgba(0, 0, 0, 0.85); /* dark transparent background */
+  justify-content: center;   /* center links vertically */
+  align-items: center;       /* center links horizontally */
+  gap: 2rem;
+  z-index: 200;
+}
+/* Hide by default */
+.mobile-menu-close {
+  display: none; /* hide by default */
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+/* Show only on mobile */
+@media (max-width: 768px) {
+  .mobile-menu-close {
+    display: block;
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    z-index: 210; /* above menu */
+  }
+  .nav-links.active .mobile-menu-close {
+    display: block;
+  }
+}
+
+
+@media (min-width: 769px) {
+  .mobile-menu-icon {
+    display: none; /* hide hamburger on desktop */
+  }
+}
+
+
+
+  .nav-links a {
+    margin: 1rem 0;
+    color: white;
+  }
+
+  .dropdown-menu {
+    position: static; /* make dropdown links flow with main nav links */
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .dropdown-menu a:hover {
+    background: rgba(212, 241, 190, 0.2); /* subtle hover effect */
+  }
+}
