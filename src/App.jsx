@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 
-import Home from "./Pages/Home/Home"
-import About from "./Pages/About/About"
+import Home from './pages/Home/Home';
+import About from './pages/About/About';
 import Products from './pages/Products/Products';
 import Documentation from './pages/Documentation/Documentation';
 import Gallery from './pages/Gallery/Gallery';
