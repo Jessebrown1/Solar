@@ -1,0 +1,49 @@
+/* 🔹 Scroll progress bar (top of screen) */
+.scroll-progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5px;
+    background-color: #0ea5e9; /* Sky blue */
+    width: 0%;
+    z-index: 1000;
+    transition: width 0.25s ease-out;
+  }
+  
+  /* 🔹 Scroll-to-top floating button */
+  .scroll-top-btn {
+    position: fixed;
+    bottom: 35px;
+    right: 35px;
+    width: 48px;
+    height: 48px;
+    background-color: #0ea5e9;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
+  
+  /* 🔹 Visible state */
+  .scroll-top-btn.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  /* 🔹 Hover effect */
+  .scroll-top-btn:hover {
+    background-color: #0284c7;
+    transform: scale(1.1);
+  }
+  

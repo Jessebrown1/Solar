@@ -3,8 +3,44 @@ import "./Home.css";
 import head1 from "../../assets/head1.png";
 import { Sun, Building2, BatteryCharging } from "lucide-react";
 import install from "../../assets/install.jpg";
+import { Wrench, DollarSign, Headphones } from "lucide-react";
+
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
+
 
 const Home = () => {
+  const [current, setCurrent] = useState(0);
+
+  const products = [
+    {
+      image: "/assets/solar-panel.jpg",
+      title: "High-Efficiency Solar Panels",
+      desc: "Capture maximum sunlight with premium photovoltaic panels.",
+    },
+    {
+      image: "/assets/solar-battery.jpg",
+      title: "Solar Battery Systems",
+      desc: "Store solar energy for uninterrupted power, day or night.",
+    },
+    {
+      image: "/assets/inverter.jpg",
+      title: "Smart Inverters",
+      desc: "Convert solar power efficiently for everyday use.",
+    },
+    {
+      image: "/assets/controller.jpg",
+      title: "Charge Controllers",
+      desc: "Optimize charging performance and battery lifespan.",
+    },
+    {
+      image: "/assets/mounting.jpg",
+      title: "Mounting Systems",
+      desc: "Durable and weatherproof support structures.",
+    },
+  ];
+  
+
   const statsData = [
     { label: "Homes Powered", value: 800, suffix: "+" },
     { label: "Renewable Energy", value: 100, suffix: "%" },
@@ -95,85 +131,195 @@ const Home = () => {
         </div>
       </div>
 
-      {/* About Section */}
-      <section className="about-section">
-        <div className="about-container">
-          {/* Left Text Section */}
-          <div className="about-text">
-            <h2 className="text-center text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Powering Ghana with{" "}
-              <span className="text-green-600">Sustainable Energy</span>
-            </h2>
 
-            <p>
-              At <span className="highlight-blue">Rabenergy Solutions</span>, we’re
-              dedicated to transforming the energy landscape by delivering reliable,
-              clean, and cost-effective solar solutions. From homes to businesses,
-              we power the future with innovation and integrity.
-            </p>
 
-            <div className="flex justify-center mt-8">
+
+
+
+
+      <section className="what-we-offer-section">
+  {/* Solar Installation */}
   <div
-    ref={statsRef}
-    className="flex justify-around w-full max-w-[800px]"
+    className="offer-card"
+    style={{
+      backgroundImage: "url('/assets/solar-install.jpg')", // 🌄 <-- change this image
+    }}
   >
-    {statsData.map((stat, idx) => (
-      <div key={idx} className="stat text-center min-w-[120px]">
-        <h3 className="text-3xl font-bold text-green-600">
-          {counts[idx]}
-          {stat.suffix}
-        </h3>
-        <p className="text-gray-700">{stat.label}</p>
-      </div>
-    ))}
+    <div className="offer-overlay">
+      <h4 className="offer-category">SOLAR ENERGY</h4>
+      <h2 className="offer-title">Solar Panel Installation</h2>
+      <p className="offer-description">
+        High-quality solar panels installed efficiently for maximum energy output.
+      </p>
+      <a href="/solar-installation" className="offer-btn">More info</a>
+    </div>
   </div>
-</div>
+
+  {/* Battery Storage */}
+  <div
+    className="offer-card"
+    style={{
+      backgroundImage: "url('/assets/battery-storage.jpg')", // 🌄 <-- change this image
+    }}
+  >
+    <div className="offer-overlay">
+      <h4 className="offer-category">ENERGY STORAGE</h4>
+      <h2 className="offer-title">Battery Storage Solutions</h2>
+      <p className="offer-description">
+        Reliable energy storage solutions to keep your power running 24/7.
+      </p>
+      <a href="/battery-storage" className="offer-btn">More info</a>
+    </div>
+  </div>
+
+  {/* Maintenance & Support */}
+  <div
+    className="offer-card"
+    style={{
+      backgroundImage: "url('/assets/maintenance.jpg')", // 🌄 <-- change this image
+    }}
+  >
+    <div className="offer-overlay">
+      <h4 className="offer-category">SUPPORT</h4>
+      <h2 className="offer-title">Maintenance & Support</h2>
+      <p className="offer-description">
+        Regular checkups and maintenance to ensure your system works perfectly.
+      </p>
+      <a href="/maintenance" className="offer-btn">More info</a>
+    </div>
+  </div>
+</section>
 
 
-            {/* Feature Highlights */}
-            <div className="features">
-              <div className="feature">
-                <div className="icon-box">
-                  <Sun />
-                </div>
-                <div>
-                  <h4>Clean & Renewable Energy</h4>
-                  <p>Harnessing solar power for a greener Ghana.</p>
-                </div>
-              </div>
 
-              <div className="feature">
-                <div className="icon-box">
-                  <Building2 />
-                </div>
-                <div>
-                  <h4>Residential & Commercial Projects</h4>
-                  <p>Trusted by homes, schools, and large industries.</p>
-                </div>
-              </div>
+<section className="solutions-section">
+  <div className="container">
+    <h2 className="section-title">Solutions & Products</h2>
+    <p className="section-subtitle">
+      Explore our range of solar solutions designed for homes, businesses, and industries.
+    </p>
 
-              <div className="feature">
-                <div className="icon-box">
-                  <BatteryCharging />
-                </div>
-                <div>
-                  <h4>Reliable Power Backup</h4>
-                  <p>Providing sustainable energy even off-grid.</p>
-                </div>
-              </div>
-            </div>
+    <div className="slider-wrapper">
+      <button
+        className="arrow-btn left"
+        onClick={() =>
+          setCurrent((prev) => (prev === 0 ? products.length - 3 : prev - 1))
+        }
+      >
+        <ChevronLeft size={30} />
+      </button>
 
-            {/* Animated Stats */}
-            
+      <div className="product-slider">
+        {products.slice(current, current + 3).map((product, idx) => (
+          <div className="product-card" key={idx}>
+            <img src={product.image} alt={product.title} />
+            <h3>{product.title}</h3>
+            <p>{product.desc}</p>
           </div>
+        ))}
+      </div>
 
-          {/* Right Image Section */}
-          <div className="about-image">
-            <img src={install} alt="Solar installation" />
-            <div className="image-overlay"></div>
-          </div>
-        </div>
-      </section>
+      <button
+        className="arrow-btn right"
+        onClick={() =>
+          setCurrent((prev) => (prev >= products.length - 3 ? 0 : prev + 1))
+        }
+      >
+        <ChevronRight size={30} />
+      </button>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<section className="projects-section">
+  <h2 className="section-title">Our Projects</h2>
+  <p className="section-subtext">
+    Explore some of our completed solar installations and energy solutions across Ghana.  
+    Each project reflects our dedication to quality, innovation, and sustainability.
+  </p>
+
+  <div className="projects-grid">
+    <div className="project-card">
+      <img src={install} alt="Residential Solar" />
+      <h3>Residential Installation</h3>
+    </div>
+
+    <div className="project-card">
+      <img src={install} alt="Commercial Solar" />
+      <h3>Commercial Rooftop System</h3>
+    </div>
+
+    <div className="project-card">
+      <img src={install} alt="Battery System" />
+      <h3>Battery Backup Setup</h3>
+    </div>
+  </div>
+</section>
+
+
+
+<section className="why-choose-section">
+  <h2 className="section-title">Why Choose Us</h2>
+  <p className="section-subtext">
+    We combine innovation, experience, and dedication to provide reliable and
+    affordable solar energy solutions across Ghana.
+  </p>
+
+  <div className="reasons-grid">
+    <div className="reason">
+      <div className="reason-icon">
+        <Wrench size={40} />
+      </div>
+      <h3>Experienced Technicians</h3>
+      <p>Our team brings over 15 years of combined solar expertise.</p>
+    </div>
+
+    <div className="reason">
+      <div className="reason-icon">
+        <DollarSign size={40} />
+      </div>
+      <h3>Affordable Solutions</h3>
+      <p>We design cost-effective systems that fit your budget and needs.</p>
+    </div>
+
+    <div className="reason">
+      <div className="reason-icon">
+        <Headphones size={40} />
+      </div>
+      <h3>24/7 Support</h3>
+      <p>Dedicated support team to ensure your system runs smoothly.</p>
+    </div>
+  </div>
+</section>
+
+
+<section className="testimonials-section">
+  <h2 className="section-title">What Our Clients Say</h2>
+  <div className="testimonials-grid">
+    <div className="testimonial">
+      <p>"Rabenergy transformed our energy bills. Excellent service!"</p>
+      <h4>- Nana K., Accra</h4>
+    </div>
+    <div className="testimonial">
+      <p>"Reliable team and top-quality installation. Highly recommend!"</p>
+      <h4>- Ama B., Tema</h4>
+    </div>
+    <div className="testimonial">
+      <p>"Reliable team and top-quality installation. Highly recommend!"</p>
+      <h4>- Ella D., Tema</h4>
+    </div>
+  </div>
+</section>
+
+
+
+
     </div>
   );
 };

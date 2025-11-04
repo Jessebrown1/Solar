@@ -1,18 +1,23 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar/Navbar';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
+import ScrollProgress from "./components/ScrollProgress/ScrollProgress";
 
-import Home from './pages/Home/Home';
-import About from './pages/About/About';
-import Products from './pages/Products/Products';
-import Documentation from './pages/Documentation/Documentation';
-import Gallery from './pages/Gallery/Gallery';
-import Blog from './pages/Blog/Blog';
-import Contact from './pages/Contact/Contact';
+import Home from "./Pages/Home/Home";
+import About from "./Pages/About/About";
+import Products from "./Pages/Products/Products";
+import Documentation from "./Pages/Documentation/Documentation";
+import Gallery from "./Pages/Gallery/Gallery";
+import Blog from "./Pages/Blog/Blog";
+import Contact from "./Pages/Contact/Contact";
 
 function App() {
   return (
-    
+    <>
+      {/* ✅ Scroll Progress Bar + Scroll to Top Button */}
+      <ScrollProgress />
+
       <div className="min-h-screen flex flex-col bg-gray-50 text-gray-900">
         {/* Navbar */}
         <Navbar />
@@ -30,8 +35,10 @@ function App() {
           </Routes>
         </div>
 
+        {/* ✅ Footer */}
+        <Footer />
       </div>
- 
+    </>
   );
 }
 
