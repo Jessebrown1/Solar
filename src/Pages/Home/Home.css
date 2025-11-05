@@ -16,22 +16,46 @@
 /* === Hero Section === */
 .hero-section {
   position: relative;
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; /* Left text */
-  padding: 4rem 6rem;
-  color: #fff;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
-/* === Hero Content === */
-.hero-overlay {
-  text-align: left;
-  background: none;
-  max-width: 700px;
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
 }
+
+.hero-blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(3px); /* 👈 adds blur effect */
+  background: rgba(0, 0, 0, 0.35); /* 👈 adds a light dark tint */
+  z-index: 1;
+}
+
+
+.hero-overlay {
+  position: relative;
+  z-index: 2; /* 👈 raise this so it appears above the blur */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: white;
+  text-align: center;
+}
+
+
 
 .hero-overlay h1 {
   font-size: clamp(2.8rem, 6vw, 4.5rem);

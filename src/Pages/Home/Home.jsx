@@ -1,9 +1,22 @@
 import React, { useEffect, useState, useRef } from "react";
 import "./Home.css";
-import head1 from "../../assets/head1.png";
+import head1 from "../../assets/head1.mp4";
+import head2 from "../../assets/head2.mp4";
 import { Sun, Building2, BatteryCharging } from "lucide-react";
 import install from "../../assets/install.jpg";
 import { Wrench, DollarSign, Headphones } from "lucide-react";
+import panel1 from "../../assets/panel1.jpg"
+import batt from "../../assets/batt.jpg"
+import supp from "../../assets/supp.jpg"
+import smart from "../../assets/smart.jpg"
+import batt2 from "../../assets/batt2.jpg"
+import solarp from "../../assets/solarp.jpeg"
+import chare from "../../assets/chare.jpeg"
+import frame from "../../assets/frame.jpeg"
+import proj1 from "../../assets/proj1.jpg"
+import proj2 from "../../assets/proj2.jpg"
+import proj3 from "../../assets/proj3.jpg"
+
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -14,27 +27,27 @@ const Home = () => {
 
   const products = [
     {
-      image: "/assets/solar-panel.jpg",
+      image: solarp,
       title: "High-Efficiency Solar Panels",
       desc: "Capture maximum sunlight with premium photovoltaic panels.",
     },
     {
-      image: "/assets/solar-battery.jpg",
+      image: batt2,
       title: "Solar Battery Systems",
       desc: "Store solar energy for uninterrupted power, day or night.",
     },
     {
-      image: "/assets/inverter.jpg",
+      image: smart,
       title: "Smart Inverters",
       desc: "Convert solar power efficiently for everyday use.",
     },
     {
-      image: "/assets/controller.jpg",
+      image: chare,
       title: "Charge Controllers",
       desc: "Optimize charging performance and battery lifespan.",
     },
     {
-      image: "/assets/mounting.jpg",
+      image: frame,
       title: "Mounting Systems",
       desc: "Durable and weatherproof support structures.",
     },
@@ -96,40 +109,40 @@ const Home = () => {
   return (
     <div className="home">
       {/* Hero Section */}
-      <div
-        className="hero-section"
-        style={{ backgroundImage: `url(${head1})` }}
-      >
-        <div className="hero-overlay">
-          <h1>Clean Energy, Bright Future</h1>
-          <p>Innovative technologies for efficient energy management.</p>
+      <div className="hero-section">
+  <video
+    className="hero-video"
+    src={head1}
+    autoPlay
+    loop
+    muted
+    playsInline
+  ></video>
+  
+  <div className="hero-blur"></div> {/* 👈 add this line */}
 
-          <div className="button-group">
-            <button className="more-btn">
-              <span className="more-btn-content">Contact Us</span>
-            </button>
+  <div className="hero-overlay">
+    <h1>Clean Energy, Bright Future</h1>
+    <p>Innovative technologies for efficient energy management.</p>
 
-            <button className="animated-button">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="arr-2"
-                viewBox="0 0 24 24"
-              >
-                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
-              </svg>
-              <span className="text">Learn More</span>
-              <span className="circle"></span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="arr-1"
-                viewBox="0 0 24 24"
-              >
-                <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
+    <div className="button-group">
+      <button className="more-btn">
+        <span className="more-btn-content">Contact Us</span>
+      </button>
+
+      <button className="animated-button">
+        <svg xmlns="http://www.w3.org/2000/svg" className="arr-2" viewBox="0 0 24 24">
+          <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+        </svg>
+        <span className="text">Learn More</span>
+        <span className="circle"></span>
+        <svg xmlns="http://www.w3.org/2000/svg" className="arr-1" viewBox="0 0 24 24">
+          <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
 
 
 
@@ -142,7 +155,7 @@ const Home = () => {
   <div
     className="offer-card"
     style={{
-      backgroundImage: "url('/assets/solar-install.jpg')", // 🌄 <-- change this image
+      backgroundImage: `url(${panel1})`,
     }}
   >
     <div className="offer-overlay">
@@ -159,7 +172,7 @@ const Home = () => {
   <div
     className="offer-card"
     style={{
-      backgroundImage: "url('/assets/battery-storage.jpg')", // 🌄 <-- change this image
+      backgroundImage: `url(${batt})`,
     }}
   >
     <div className="offer-overlay">
@@ -176,7 +189,7 @@ const Home = () => {
   <div
     className="offer-card"
     style={{
-      backgroundImage: "url('/assets/maintenance.jpg')", // 🌄 <-- change this image
+      backgroundImage: `url(${supp})`,
     }}
   >
     <div className="offer-overlay">
@@ -216,7 +229,7 @@ const Home = () => {
             <h3>{product.title}</h3>
             <p>{product.desc}</p>
           </div>
-        ))}
+        ))}Solar Panel Installation
       </div>
 
       <button
@@ -246,18 +259,18 @@ const Home = () => {
 
   <div className="projects-grid">
     <div className="project-card">
-      <img src={install} alt="Residential Solar" />
+      <img src={proj1} alt="Residential Solar" />
+      <h3> Commercial Rooftop System</h3>
+    </div>
+
+    <div className="project-card">
+      <img src={proj2} alt="Commercial Solar" />
       <h3>Residential Installation</h3>
     </div>
 
     <div className="project-card">
-      <img src={install} alt="Commercial Solar" />
-      <h3>Commercial Rooftop System</h3>
-    </div>
-
-    <div className="project-card">
-      <img src={install} alt="Battery System" />
-      <h3>Battery Backup Setup</h3>
+      <img src={proj3} alt="Battery System" />
+      <h3>DIY solar with battery backup</h3>
     </div>
   </div>
 </section>
