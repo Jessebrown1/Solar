@@ -1,9 +1,9 @@
 import React, { useEffect, useState, useRef } from "react";
 import "./Home.css";
 import head1 from "../../assets/head1.mp4";
-import head2 from "../../assets/head2.mp4";
+
 import { Sun, Building2, BatteryCharging } from "lucide-react";
-import install from "../../assets/install.jpg";
+
 import { Wrench, DollarSign, Headphones } from "lucide-react";
 import panel1 from "../../assets/panel1.jpg"
 import batt from "../../assets/batt.jpg"
@@ -60,7 +60,7 @@ const Home = () => {
     { label: "Years Experience", value: 15, suffix: "+" },
   ];
 
-  const [counts, setCounts] = useState(statsData.map(() => 0));
+  const [ setCounts] = useState(statsData.map(() => 0));
   const statsRef = useRef(null);
   const [animate, setAnimate] = useState(false);
 
