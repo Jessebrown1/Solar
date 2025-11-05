@@ -7,10 +7,10 @@ import ScrollProgress from "./components/ScrollProgress/ScrollProgress";
 import Home from "./Pages/Home/Home";
 import About from "./Pages/About/About";
 import Products from "./Pages/Products/Products";
-import Documentation from "./Pages/Documentation/Documentation";
 import Gallery from "./Pages/Gallery/Gallery";
 import Blog from "./Pages/Blog/Blog";
 import Contact from "./Pages/Contact/Contact";
+import Solutions from "./Pages/Solutions/Solutions";
 
 function App() {
   return (
@@ -28,7 +28,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/products" element={<Products />} />
-            <Route path="/documentation" element={<Documentation />} />
+            <Route path="/solutions" element={<Solutions />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />

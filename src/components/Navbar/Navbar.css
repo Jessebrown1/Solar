@@ -1,16 +1,24 @@
 .navbar {
-  color: white;
-  padding: 1rem 2rem;
-  position: fixed;  /* change from absolute to fixed */
+  position: fixed;           /* stick to the top */
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;   /* higher so it stays above other content */
+  padding: 1rem 2rem;
+  color: white;
+  background: transparent;   /* make it transparent */
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* Optional: make it slightly visible when scrolling */
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.7); /* add a faint background on scroll */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
 
 
 /* Container */
