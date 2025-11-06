@@ -55,19 +55,20 @@ const Products = () => {
         </div>
       </div>
 
-      {/* 🧱 Section Title Above Products */}
-      <h1 className="products-main-title">☀️ Discover Our Best-Selling Solar Gear ☀️</h1>
+      <h1 className="products-main-title">
+  ⚡ Discover Our Best-Selling Solar Gear ⚡
+</h1>
 
-      {/* 🧱 Products Grid */}
-      <div className="products-grid">
-        {products.map((product, index) => (
-          <div className="product-card" key={index}>
-            <img src={product.image} alt={product.name} />
-            <h3>{product.name}</h3>
-            <p>{product.description}</p>
-          </div>
-        ))}
-      </div>
+<div className="products-grid">
+  {products.map((product, index) => (
+    <div className="product-card" key={index}>
+      <img src={product.image} alt={product.name} />
+      <h3>{product.name}</h3>
+      <p>{product.description}</p>
+    </div>
+  ))}
+</div>
+
     </section>
   );
 };

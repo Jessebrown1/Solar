@@ -1,0 +1,188 @@
+/* 🟢 General Reset */
+.blog-page {
+    width: 100%;
+    background-color: #f9fafb;
+    overflow-x: hidden;
+  }
+  
+  /* 🌞 Hero Section */
+  .blog-hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .blog-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 1;
+  }
+  
+  .blog-hero .overlay {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    backdrop-filter: blur(6px);
+    padding: 50px 25px;
+    border-radius: 20px;
+  }
+  
+  .blog-hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+  }
+  
+  .blog-hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+  }
+  
+  /* 📰 Blog Section */
+  .blog-title {
+    text-align: center;
+    margin: 80px 0 40px;
+    font-size: 2.2rem;
+    color: #111827;
+    background: linear-gradient(90deg, #16a34a, #2563eb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+  }
+  
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    padding: 0 40px 80px;
+  }
+  
+  /* 📰 Blog Cards Animation */
+.blog-card {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transform: translateY(30px);
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+    transition: all 0.4s ease;
+  }
+  
+  .blog-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Add slight stagger effect for multiple cards */
+  .blog-card:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+  .blog-card:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+  .blog-card:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  .blog-card:nth-child(4) {
+    animation-delay: 0.8s;
+  }
+  
+  /* ✨ Keyframe for fade-up animation */
+  @keyframes fadeInUp {
+    from {
+      transform: translateY(40px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  
+  .image-container img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+  }
+  
+  .blog-content {
+    padding: 25px;
+  }
+  
+  .blog-content h3 {
+    font-size: 1.4rem;
+    color: #1f2937;
+    margin-bottom: 10px;
+  }
+  
+  .meta {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 15px;
+  }
+  
+  .meta span {
+    color: #2563eb;
+    font-weight: 600;
+  }
+  
+  .excerpt {
+    font-size: 1rem;
+    color: #374151;
+    margin-bottom: 20px;
+  }
+  
+  .read-more {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    color: #16a34a;
+    transition: 0.3s;
+  }
+  
+  .read-more:hover {
+    color: #2563eb;
+  }
+  
+  /* 📱 Responsive */
+  @media (max-width: 768px) {
+    .blog-hero h1 {
+      font-size: 2.2rem;
+    }
+  
+    .blog-hero p {
+      font-size: 1rem;
+    }
+  
+    .blog-grid {
+      padding: 0 20px 60px;
+    }
+  }
+  
+  .blog-hero .overlay {
+    animation: fadeUp 1.5s ease-in-out forwards;
+    opacity: 0;
+  }
+  
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

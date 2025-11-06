@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import "./Home.css";
 import head1 from "../../assets/head1.mp4";
 
-import { Sun, Building2, BatteryCharging } from "lucide-react";
+import { Link } from "react-router-dom";
 
 import { Wrench, DollarSign, Headphones } from "lucide-react";
 import panel1 from "../../assets/panel1.jpg"
@@ -85,6 +85,27 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
+    const elements = document.querySelectorAll(".fade-up, .fade-left, .fade-right");
+  
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+  
+    elements.forEach((el) => observer.observe(el));
+  
+    return () => observer.disconnect();
+  }, []);
+  
+
+  useEffect(() => {
     if (!animate) return;
 
     const duration = 2000; // 2 seconds
@@ -126,20 +147,22 @@ const Home = () => {
     <p>Innovative technologies for efficient energy management.</p>
 
     <div className="button-group">
-      <button className="more-btn">
-        <span className="more-btn-content">Contact Us</span>
-      </button>
+    <button className="more-btn">
+  <Link to="/contact" className="more-btn-content">
+    Contact Us
+  </Link>
+</button>
 
-      <button className="animated-button">
-        <svg xmlns="http://www.w3.org/2000/svg" className="arr-2" viewBox="0 0 24 24">
-          <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
-        </svg>
-        <span className="text">Learn More</span>
-        <span className="circle"></span>
-        <svg xmlns="http://www.w3.org/2000/svg" className="arr-1" viewBox="0 0 24 24">
-          <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
-        </svg>
-      </button>
+<Link to="/solutions" className="animated-button">
+  <svg xmlns="http://www.w3.org/2000/svg" className="arr-2" viewBox="0 0 24 24">
+    <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+  </svg>
+  <span className="text">Learn More</span>
+  <span className="circle"></span>
+  <svg xmlns="http://www.w3.org/2000/svg" className="arr-1" viewBox="0 0 24 24">
+    <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
+  </svg>
+</Link>
     </div>
   </div>
 </div>
@@ -152,55 +175,56 @@ const Home = () => {
 
       <section className="what-we-offer-section">
   {/* Solar Installation */}
-  <div
-    className="offer-card"
-    style={{
-      backgroundImage: `url(${panel1})`,
-    }}
-  >
-    <div className="offer-overlay">
-      <h4 className="offer-category">SOLAR ENERGY</h4>
-      <h2 className="offer-title">Solar Panel Installation</h2>
-      <p className="offer-description">
-        High-quality solar panels installed efficiently for maximum energy output.
-      </p>
-      <a href="/solar-installation" className="offer-btn">More info</a>
-    </div>
+  {/* Solar Panel Installation */}
+<div
+  className="offer-card"
+  style={{
+    backgroundImage: `url(${panel1})`,
+  }}
+>
+  <div className="offer-overlay">
+    <h4 className="offer-category">SOLAR ENERGY</h4>
+    <h2 className="offer-title">Solar Panel Installation</h2>
+    <p className="offer-description">
+      High-quality solar panels installed efficiently for maximum energy output.
+    </p>
+    <Link to="/solutions" className="offer-btn">More info</Link>
   </div>
+</div>
 
-  {/* Battery Storage */}
-  <div
-    className="offer-card"
-    style={{
-      backgroundImage: `url(${batt})`,
-    }}
-  >
-    <div className="offer-overlay">
-      <h4 className="offer-category">ENERGY STORAGE</h4>
-      <h2 className="offer-title">Battery Storage Solutions</h2>
-      <p className="offer-description">
-        Reliable energy storage solutions to keep your power running 24/7.
-      </p>
-      <a href="/battery-storage" className="offer-btn">More info</a>
-    </div>
+{/* Battery Storage */}
+<div
+  className="offer-card"
+  style={{
+    backgroundImage: `url(${batt})`,
+  }}
+>
+  <div className="offer-overlay">
+    <h4 className="offer-category">ENERGY STORAGE</h4>
+    <h2 className="offer-title">Battery Storage Solutions</h2>
+    <p className="offer-description">
+      Reliable energy storage solutions to keep your power running 24/7.
+    </p>
+    <Link to="/solutions" className="offer-btn">More info</Link>
   </div>
+</div>
 
-  {/* Maintenance & Support */}
-  <div
-    className="offer-card"
-    style={{
-      backgroundImage: `url(${supp})`,
-    }}
-  >
-    <div className="offer-overlay">
-      <h4 className="offer-category">SUPPORT</h4>
-      <h2 className="offer-title">Maintenance & Support</h2>
-      <p className="offer-description">
-        Regular checkups and maintenance to ensure your system works perfectly.
-      </p>
-      <a href="/maintenance" className="offer-btn">More info</a>
-    </div>
+{/* Maintenance & Support */}
+<div
+  className="offer-card"
+  style={{
+    backgroundImage: `url(${supp})`,
+  }}
+>
+  <div className="offer-overlay">
+    <h4 className="offer-category">SUPPORT</h4>
+    <h2 className="offer-title">Maintenance & Support</h2>
+    <p className="offer-description">
+      Regular checkups and maintenance to ensure your system works perfectly.
+    </p>
+    <Link to="/solutions" className="offer-btn">More info</Link>
   </div>
+</div>
 </section>
 
 

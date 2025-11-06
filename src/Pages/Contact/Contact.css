@@ -1,0 +1,213 @@
+.contact-page {
+    width: 100%;
+    background-color: #f9fafb;
+    overflow-x: hidden;
+  }
+  
+  /* 🌞 Hero */
+  .contact-hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+ 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .contact-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+  }
+  
+  .contact-hero .overlay {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    border-radius: 16px;
+    backdrop-filter: blur(2px);
+    animation: fadeUp 1.5s ease forwards;
+  }
+  
+  .contact-hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+  
+  .contact-hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+  }
+  
+  /* 📞 Info + Form */
+  .contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+    padding: 80px 40px;
+    background: #fff;
+  }
+  
+  .contact-info {
+    flex: 1;
+    min-width: 320px;
+    max-width: 400px;
+  }
+  
+  .contact-info h2 {
+    font-size: 1.8rem;
+    color: #111827;
+    margin-bottom: 20px;
+  }
+  
+  .contact-info p {
+    color: #4b5563;
+    margin-bottom: 25px;
+  }
+  
+  .info-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+    color: #2563eb;
+    font-weight: 600;
+  }
+  
+  .icon {
+    color: #16a34a;
+    width: 22px;
+    height: 22px;
+  }
+  
+  /* 💬 WhatsApp Button */
+  .whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #25d366;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 12px 18px;
+    border-radius: 50px;
+    transition: 0.3s;
+    margin-top: 20px;
+  }
+  
+  .whatsapp-btn:hover {
+    background: #1ebc5d;
+    transform: scale(1.05);
+  }
+  
+  /* 🧾 Form */
+  .contact-form {
+    flex: 1;
+    min-width: 320px;
+    max-width: 450px;
+    background: #f9fafb;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease;
+  }
+  
+  .contact-form:hover {
+    transform: translateY(-5px);
+  }
+  
+  .contact-form h2 {
+    color: #111827;
+    margin-bottom: 25px;
+    font-size: 1.7rem;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    outline: none;
+    font-size: 1rem;
+    transition: 0.3s;
+  }
+  
+  input:focus,
+  textarea:focus {
+    border-color: #16a34a;
+    box-shadow: 0 0 8px rgba(22, 163, 74, 0.2);
+  }
+  
+  .submit-btn {
+    background: linear-gradient(90deg, #16a34a, #2563eb);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    padding: 14px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background: linear-gradient(90deg, #2563eb, #16a34a);
+    transform: scale(1.05);
+  }
+  
+  /* 🗺️ Map Section */
+  .map-container {
+    padding: 60px 40px;
+    text-align: center;
+    background: #f9fafb;
+  }
+  
+  .map-container h2 {
+    font-size: 2rem;
+    color: #111827;
+    margin-bottom: 30px;
+  }
+  
+  /* ✨ Animations */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1.2s ease forwards;
+  }
+  
+  @keyframes fadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* 📱 Responsive */
+  @media (max-width: 768px) {
+    .contact-hero h1 {
+      font-size: 2.2rem;
+    }
+  
+    .contact-container {
+      padding: 60px 20px;
+    }
+  
+    .map-container {
+      padding: 40px 20px;
+    }
+  }
+  

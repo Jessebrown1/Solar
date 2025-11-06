@@ -9,7 +9,7 @@
   /* 🌞 Hero Section */
   .products-hero {
     position: relative;
-    width: 100vw; /* full screen width */
+    width: 100vw;
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -19,9 +19,6 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-  
-    /* 🧭 pushes hero below fixed navbar */
-    margin-top:-px;
   
     overflow: hidden;
   }
@@ -39,12 +36,17 @@
   .products-hero .overlay {
     position: relative;
     z-index: 2;
-    background: rgba(255, 255, 255, 0.01);
-    backdrop-filter: blur(6px);
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(3px);
     padding: 50px 25px;
     border-radius: 20px;
     max-width: 800px;
     margin: 0 15px;
+  
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 1.5s ease forwards;
+    animation-delay: 0.3s;
   }
   
   .products-hero h1 {
@@ -63,6 +65,24 @@
     margin: 0 auto;
   }
   
+  /* 🌟 Main Title Animation */
+  .products-main-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 2.5rem 0 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, #f9b233, #ff7a00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 1.2s ease forwards;
+    animation-delay: 1.2s;
+  }
+  
   /* 🧱 Products Grid */
   .products-grid {
     display: grid;
@@ -73,17 +93,28 @@
     background: #f8f9fa;
   }
   
+  /* Product Card Animation */
   .product-card {
     background: #fff;
     border-radius: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     padding: 25px;
-    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(50px) scale(0.98);
+    animation: fadePop 0.8s ease forwards;
   }
   
+  .product-card:nth-child(1) { animation-delay: 1.4s; }
+  .product-card:nth-child(2) { animation-delay: 1.6s; }
+  .product-card:nth-child(3) { animation-delay: 1.8s; }
+  .product-card:nth-child(4) { animation-delay: 2s; }
+  .product-card:nth-child(5) { animation-delay: 2.2s; }
+  .product-card:nth-child(6) { animation-delay: 2.4s; }
+  
   .product-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px) scale(1.02);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s ease;
   }
   
   .product-card img {
@@ -104,27 +135,34 @@
     font-size: 0.95rem;
     color: #666;
   }
-
-
-  .products-main-title {
-    text-align: center;
-    font-size: 2.2rem;
-    font-weight: 700;
-    margin: 2.5rem 0 1rem;
-    color: #1a1a1a;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    background: linear-gradient(90deg, #f9b233, #ff7a00);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  
+  /* ✨ Keyframes for Animations */
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
   
+  @keyframes fadePop {
+    0% {
+      opacity: 0;
+      transform: translateY(50px) scale(0.95);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
   
   /* 📱 Responsive Tweaks */
   @media (max-width: 1024px) {
     .products-hero {
       height: 75vh;
-      margin-top: 70px;
     }
   
     .products-hero h1 {
@@ -135,7 +173,6 @@
   @media (max-width: 768px) {
     .products-hero {
       height: 100vh;
-      margin-top: 65px;
     }
   
     .products-hero h1 {
@@ -153,11 +190,6 @@
   }
   
   @media (max-width: 480px) {
-    .products-hero {
-      height: 100vh;
-      margin-top: -1px;
-    }
-  
     .products-hero h1 {
       font-size: 1.8rem;
     }
