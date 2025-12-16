@@ -232,6 +232,66 @@
   transition: transform 0.4s ease;
 }
 
+
+
+
+/* === Hero Title Animation === */
+.hero-overlay h1 {
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+  line-height: 1.2;
+  color: #ffffff;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  
+  /* Animation */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideUp 1s ease forwards;
+  animation-delay: 0.5s; /* Delay before it appears */
+}
+
+/* Optional: animate the paragraph after the title */
+.hero-overlay p {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  color: #e5e7eb;
+  max-width: 550px;
+  
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideUp 1s ease forwards;
+  animation-delay: 1s;
+}
+
+/* Keyframes */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional: Stagger multiple words for a more dynamic look */
+.hero-overlay h1 span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideUp 0.8s ease forwards;
+}
+
+.hero-overlay h1 span:nth-child(1) { animation-delay: 0.5s; }
+.hero-overlay h1 span:nth-child(2) { animation-delay: 0.7s; }
+.hero-overlay h1 span:nth-child(3) { animation-delay: 0.9s; }
+
+
+
+
 /* === About Section === */
 .about-section {
   padding: 6rem 1.5rem;
@@ -616,8 +676,9 @@
 
 
 /* ==== SOLUTIONS & PRODUCTS ==== */
+/* ==== SOLUTIONS & PRODUCTS ==== */
 .solutions-section {
-  padding: 80px 20px;
+  padding: 80px 9%;
   background-color: #f8fafc;
   text-align: center;
 }
@@ -635,6 +696,7 @@
   font-size: 1rem;
 }
 
+/* Slider wrapper */
 .slider-wrapper {
   position: relative;
   display: flex;
@@ -642,15 +704,16 @@
   justify-content: center;
   max-width: 1100px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .product-slider {
   display: flex;
   gap: 20px;
-  overflow: hidden;
   transition: transform 0.5s ease;
 }
 
+/* Product card */
 .product-card {
   flex: 0 0 calc(33.333% - 20px);
   background: #ffffff;
@@ -686,7 +749,7 @@
   margin-top: 6px;
 }
 
-/* ==== ARROWS ==== */
+/* Arrows */
 .arrow-btn {
   position: absolute;
   top: 50%;
@@ -718,9 +781,15 @@
 }
 
 /* ==== RESPONSIVE ==== */
+@media (max-width: 1100px) {
+  .solutions-section {
+    padding: 60px 5%;
+  }
+}
+
 @media (max-width: 900px) {
   .product-card {
-    flex: 0 0 calc(50% - 20px);
+    flex: 0 0 calc(50% - 15px);
   }
 
   .arrow-btn.left {
@@ -736,18 +805,35 @@
   .product-card {
     flex: 0 0 100%;
   }
+
+  .arrow-btn {
+    width: 35px;
+    height: 35px;
+  }
 }
 
+@media (max-width: 400px) {
+  .product-card img {
+    height: 180px;
+  }
 
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+  }
+}
 
 /* ===== Projects Section ===== */
 .projects-section {
-  padding: 100px 20px;
+  padding: 100px 5%;
   background-color: #f4f7f9;
   text-align: center;
 }
 
-.section-title {
+.section-title.projects {
   font-size: 2.8rem;
   font-weight: 700;
   color: #0b6623;
@@ -755,7 +841,7 @@
   position: relative;
 }
 
-.section-title::after {
+.section-title.projects::after {
   content: "";
   width: 90px;
   height: 4px;
@@ -765,7 +851,6 @@
   border-radius: 4px;
 }
 
-/* ===== Section Subtext ===== */
 .section-subtext {
   font-size: 1rem;
   color: #555;
@@ -774,16 +859,16 @@
   line-height: 1.6;
 }
 
-/* ===== Projects Grid ===== */
 .projects-grid {
   display: flex;
   justify-content: center;
   align-items: stretch;
   flex-wrap: wrap;
-  gap: 2.5rem;
+  gap: 2rem;
   max-width: 1300px;
   margin: 0 auto;
 }
+
 
 /* ===== Project Card ===== */
 .project-card {

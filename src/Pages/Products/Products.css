@@ -207,3 +207,96 @@
     }
   }
   
+
+
+
+  /* 🔘 Filter Tabs */
+.filter-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px 0 10px;
+  flex-wrap: wrap;
+}
+
+.filter-tabs button {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 8px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.filter-tabs button.active,
+.filter-tabs button:hover {
+  background: linear-gradient(90deg, #f9b233, #ff7a00);
+  color: #fff;
+  border-color: transparent;
+}
+
+/* 🔗 Clickable Category Cards */
+.category-card {
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 🎯 Icon Overlay */
+.card-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 8px;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.card-icon svg {
+  width: 22px;
+  height: 22px;
+  color: #ff7a00;
+}
+
+/* 🟧 Hover CTA Overlay */
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card-overlay span {
+  background: #ff7a00;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.category-card:hover .card-overlay {
+  opacity: 1;
+}
+
+
+
+  /* 🔖 Category Label */
+.category-tag {
+  display: inline-block;
+  background: linear-gradient(90deg, #f9b233, #ff7a00);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
