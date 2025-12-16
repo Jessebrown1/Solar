@@ -13,10 +13,10 @@ import drive3 from "../../assets/drive3.jpg";
 
 import stabilizer from "../../assets/stabilizer.jpg";
 
-import resolution1 from "../../assets/resolution1.jpg";
-import resolution2 from "../../assets/resolution2.jpg";
+
+
 import resolution3 from "../../assets/resolution3.jpg"; 
-import resolution4 from "../../assets/resolution4.jpg";
+
 import resolution5 from "../../assets/resolution5.jpg";
 import resolution6 from "../../assets/resolution6.jpg";
 import resolution7 from "../../assets/resolution7.jpg";
@@ -26,7 +26,7 @@ import resolution9 from "../../assets/resolution9.jpg";
 
 import inverter1 from "../../assets/inverter1.jpg";
 import inverter2 from "../../assets/inverter2.jpg";
-import inverter3 from "../../assets/inverter3.jpg";
+
 import inverter4 from "../../assets/inverter4.jpg";
 import inverter5 from "../../assets/inverter5.jpg";
 import inverter6 from "../../assets/inverter6.jpg";
@@ -34,7 +34,7 @@ import inverter7 from "../../assets/inverter7.jpg";
 import inverter8 from "../../assets/inverter8.jpg";
 import inverter9 from "../../assets/inverter9.jpg";
 import inverter10 from "../../assets/inverter10.jpg";
-import inverter11 from "../../assets/inverter11.jpg";
+
 import inverter12 from "../../assets/inverter12.jpg";
 
 
@@ -110,24 +110,8 @@ const Products = () => {
     },
 
 
-    {
-      name: "High Resolution",
-      group: "Industrial",
-      icon: <Cpu />,
-      image: resolution1,
-      slug: "high-resolution",
-      description:
-        "High-precision power solutions for industrial applications.",
-    },
-    {
-      name: "High Resolution",
-      group: "Industrial",
-      icon: <Cpu />,
-      image: resolution2,
-      slug: "high-resolution",
-      description:
-        "High-precision power solutions for industrial applications.",
-    },
+
+
     {
       name: "High Resolution",
       group: "Industrial",
@@ -137,15 +121,7 @@ const Products = () => {
       description:
         "High-precision power solutions for industrial applications.",
     },
-    {
-      name: "High Resolution",
-      group: "Industrial",
-      icon: <Cpu />,
-      image: resolution4,
-      slug: "high-resolution",
-      description:
-        "High-precision power solutions for industrial applications.",
-    },
+    
     {
       name: "High Resolution",
       group: "Industrial",
@@ -218,15 +194,7 @@ const Products = () => {
       description:
         "Reliable solar inverters and energy storage systems.",
     },
-    {
-      name: "Solar Inverters & Batteries",
-      group: "Renewable",
-      icon: <Sun />,
-      image: inverter3,
-      slug: "solar-inverters-batteries",
-      description:
-        "Reliable solar inverters and energy storage systems.",
-    },
+    
     {
       name: "Solar Inverters & Batteries",
       group: "Renewable",
@@ -290,15 +258,7 @@ const Products = () => {
       description:
         "Reliable solar inverters and energy storage systems.",
     },
-    {
-      name: "Solar Inverters & Batteries",
-      group: "Renewable",
-      icon: <Sun />,
-      image: inverter11,
-      slug: "solar-inverters-batteries",
-      description:
-        "Reliable solar inverters and energy storage systems.",
-    },
+    
     {
       name: "Solar Inverters & Batteries",
       group: "Renewable",
