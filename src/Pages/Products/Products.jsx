@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Products.css";
 import { Bolt, Sun, Cpu, Settings, BatteryCharging, ShieldCheck } from "lucide-react";
 
-import prod from "../../assets/prod.jpg";
+import prod from "../../assets/prod.jpeg";
 
 import avr from "../../assets/avr.jpg";
 import avr1 from "../../assets/avr1.jpg";

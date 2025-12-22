@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import "./About.css";
 import ceo from "../../assets/ceo.jpg";
-import head1 from "../../assets/head1.png";
+import about from "../../assets/about.jpeg";
+
 import { Sun, Leaf, Shield, Lightbulb, Rocket, Users } from "lucide-react";
 
 const About = () => {
@@ -25,7 +26,7 @@ const About = () => {
       {/* 🌞 HERO */}
       <section
         className="about-hero"
-        style={{ backgroundImage: `url(${head1})` }}
+        style={{ backgroundImage: `url(${about})` }}
       >
         <div className="overlay">
           <h1>About Us</h1>
@@ -46,9 +47,7 @@ const About = () => {
         <div className="about-container">
           <div className="about-text">
             <p>
-              <strong>Rabenergy Solutions</strong> is a Ghanaian renewable energy
-              company focused on providing clean, reliable, and affordable solar
-              power solutions for homes, institutions, and businesses.
+            <strong>Rab Energy Solutions  </strong>is one of the leading backup and renewable energy companies in Ghana. We are an indigenous Limited Liability company with more than ten years of experience in the renewable energy business. We design and integrate solutions that cut across all levels of energy demand; ranging from small households’ solar hybrid systems to mini solar grid systems for rural electriﬁcation and industrial power backup systems.
             </p>
 
             {/* 🎯 MISSION & VISION — EXACT WORDING */}

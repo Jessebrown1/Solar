@@ -45,7 +45,7 @@ const Navbar = () => {
             About Us
           </Link>
           <Link to="/solutions" onClick={handleLinkClick}>
-            Solutions
+            Our Profile
           </Link>
           <Link to="/products" onClick={handleLinkClick}>
             Products

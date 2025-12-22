@@ -1,7 +1,7 @@
 import React from "react";
 import "./Contact.css";
 import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react";
-import contact from "../../assets/contact.jpg"; // ✅ Import background image
+import contact from "../../assets/contact.jpeg"; // ✅ Import background image
 
 const Contact = () => {
   return (

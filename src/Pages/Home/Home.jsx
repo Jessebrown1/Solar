@@ -4,18 +4,18 @@ import head1 from "../../assets/head1.mp4";
 
 import { Link } from "react-router-dom";
 
-import { Wrench, DollarSign, Headphones } from "lucide-react";
-import panel1 from "../../assets/panel1.jpg"
-import batt from "../../assets/batt.jpg"
-import supp from "../../assets/supp.jpg"
-import smart from "../../assets/smart.jpg"
+import { Award, Layers, Globe, MapPin, ShieldCheck } from "lucide-react";
+
+import panel1 from "../../assets/panel1.jpeg"
+import batt from "../../assets/batt.jpeg"
+import supp from "../../assets/supp.jpeg"
+
 import batt2 from "../../assets/batt2.jpg"
-import solarp from "../../assets/solarp.jpeg"
-import chare from "../../assets/chare.jpeg"
-import frame from "../../assets/frame.jpeg"
-import proj1 from "../../assets/proj1.jpg"
-import proj2 from "../../assets/proj2.jpg"
+import solarpp from "../../assets/solarpp.jpg"
+import proj1 from "../../assets/proj1.jpeg"
+import proj2 from "../../assets/proj2.jpeg"
 import proj3 from "../../assets/proj3.jpg"
+import avr from "../../assets/avr.jpg";
 
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -27,7 +27,7 @@ const Home = () => {
 
   const products = [
     {
-      image: solarp,
+      image: solarpp,
       title: "High-Efficiency Solar Panels",
       desc: "Capture maximum sunlight with premium photovoltaic panels.",
     },
@@ -37,20 +37,10 @@ const Home = () => {
       desc: "Store solar energy for uninterrupted power, day or night.",
     },
     {
-      image: smart,
+      image: avr,
       title: "Smart Inverters",
       desc: "Convert solar power efficiently for everyday use.",
-    },
-    {
-      image: chare,
-      title: "Charge Controllers",
-      desc: "Optimize charging performance and battery lifespan.",
-    },
-    {
-      image: frame,
-      title: "Mounting Systems",
-      desc: "Durable and weatherproof support structures.",
-    },
+    }
   ];
   
 
@@ -302,35 +292,66 @@ const Home = () => {
 
 
 <section className="why-choose-section">
-  <h2 className="section-title">Why Choose Us</h2>
+  <h2 className="section-title">Why Choose Rab Energy Solutions</h2>
   <p className="section-subtext">
-    We combine innovation, experience, and dedication to provide reliable and
+    We combine innovation, experience, and dedication to deliver reliable and
     affordable solar energy solutions across Ghana.
   </p>
 
   <div className="reasons-grid">
     <div className="reason">
       <div className="reason-icon">
-        <Wrench size={40} />
+        <Award size={40} />
       </div>
-      <h3>Experienced Technicians</h3>
-      <p>Our team brings over 15 years of combined solar expertise.</p>
+      <h3>Proven Expertise</h3>
+      <p>
+        Over a decade of experience delivering dependable renewable energy
+        solutions.
+      </p>
     </div>
 
     <div className="reason">
       <div className="reason-icon">
-        <DollarSign size={40} />
+        <Layers size={40} />
       </div>
-      <h3>Affordable Solutions</h3>
-      <p>We design cost-effective systems that fit your budget and needs.</p>
+      <h3>Comprehensive Solutions</h3>
+      <p>
+        End-to-end solar solutions for residential, commercial, and industrial
+        projects.
+      </p>
     </div>
 
     <div className="reason">
       <div className="reason-icon">
-        <Headphones size={40} />
+        <Globe size={40} />
       </div>
-      <h3>24/7 Support</h3>
-      <p>Dedicated support team to ensure your system runs smoothly.</p>
+      <h3>Global Partnerships</h3>
+      <p>
+        Collaborating with world-class partners to deliver efficient and
+        reliable clean energy systems.
+      </p>
+    </div>
+
+    <div className="reason">
+      <div className="reason-icon">
+        <MapPin size={40} />
+      </div>
+      <h3>Local Knowledge</h3>
+      <p>
+        Deep understanding of Ghana’s energy challenges and environmental
+        conditions.
+      </p>
+    </div>
+
+    <div className="reason">
+      <div className="reason-icon">
+        <ShieldCheck size={40} />
+      </div>
+      <h3>After-Sales Support</h3>
+      <p>
+        Regular maintenance and ongoing support to ensure maximum return on
+        investment for every installation.
+      </p>
     </div>
   </div>
 </section>
@@ -338,18 +359,122 @@ const Home = () => {
 
 <section className="testimonials-section">
   <h2 className="section-title">What Our Clients Say</h2>
-  <div className="testimonials-grid">
-    <div className="testimonial">
-      <p>"Rabenergy transformed our energy bills. Excellent service!"</p>
-      <h4>- Nana K., Accra</h4>
-    </div>
-    <div className="testimonial">
-      <p>"Reliable team and top-quality installation. Highly recommend!"</p>
-      <h4>- Ama B., Tema</h4>
-    </div>
-    <div className="testimonial">
-      <p>"Reliable team and top-quality installation. Highly recommend!"</p>
-      <h4>- Ella D., Tema</h4>
+
+  <div className="testimonials-slider">
+    <div className="testimonials-track">
+      {/* Original testimonials */}
+      <div className="testimonial">
+        <p>
+          "With our solar installations from Rab Energy Solutions, our hotel has
+          uninterrupted power supply which gives our customers more satisfaction."
+        </p>
+        <h4>Rhogem Hotel</h4>
+      </div>
+
+      <div className="testimonial">
+        <p>
+          "After being introduced to solar systems by Rab Energy Solutions, we
+          get more value for our homes and this makes us keep building more."
+        </p>
+        <h4>Vans International Real Estate</h4>
+      </div>
+
+      <div className="testimonial">
+        <p>
+          "Our solar installations from Rab Energy Solutions are truly a cost-saving
+          investment, allowing us to offer better rates to our clients."
+        </p>
+        <h4>Yankey Yankey Apartments</h4>
+      </div>
+
+      <div className="testimonial">
+        <p>
+          "Our remote areas with little or no access to electricity relied on
+          Rab Energy Solutions solar installations as dependable power partners."
+        </p>
+        <h4>Ahantaman Rural Bank</h4>
+      </div>
+
+      <div className="testimonial">
+        <p>
+          "Rab Energy Solutions supported our farming and irrigation needs with
+          borehole and solar irrigation systems, ensuring year-round harvests."
+        </p>
+        <h4>Western Serene Hotel</h4>
+      </div>
+
+      <div className="testimonial">
+        <p>
+          "I drive an electric vehicle comfortably and maintenance-free.
+          Rab Energy Solutions inspired me to adopt clean energy across our hotels."
+        </p>
+        <h4>Mr. Ansah Rodney</h4>
+      </div>
+
+      <div className="testimonial">
+        <p>
+          "I received solar installation training from Rab Energy Solutions and
+          was employed as a solar technician. They gave me a career path."
+        </p>
+        <h4>Kinsley Andoh</h4>
+      </div>
+
+      {/* Duplicated testimonials (for infinite loop) */}
+      <div className="testimonial">
+        <p>
+          "With our solar installations from Rab Energy Solutions, our hotel has
+          uninterrupted power supply which gives our customers more satisfaction."
+        </p>
+        <h4>Rhogem Hotel</h4>
+      </div>
+
+      <div className="testimonial">
+        <p>
+          "After being introduced to solar systems by Rab Energy Solutions, we
+          get more value for our homes and this makes us keep building more."
+        </p>
+        <h4>Vans International Real Estate</h4>
+      </div>
+
+      <div className="testimonial">
+        <p>
+          "Our solar installations from Rab Energy Solutions are truly a cost-saving
+          investment, allowing us to offer better rates to our clients."
+        </p>
+        <h4>Yankey Yankey Apartments</h4>
+      </div>
+
+      <div className="testimonial">
+        <p>
+          "Our remote areas with little or no access to electricity relied on
+          Rab Energy Solutions solar installations as dependable power partners."
+        </p>
+        <h4>Ahantaman Rural Bank</h4>
+      </div>
+
+      <div className="testimonial">
+        <p>
+          "Rab Energy Solutions supported our farming and irrigation needs with
+          borehole and solar irrigation systems, ensuring year-round harvests."
+        </p>
+        <h4>Western Serene Hotel</h4>
+      </div>
+
+      <div className="testimonial">
+        <p>
+          "I drive an electric vehicle comfortably and maintenance-free.
+          Rab Energy Solutions inspired me to adopt clean energy across our hotels."
+        </p>
+        <h4>Mr. Ansah Rodney</h4>
+      </div>
+
+      <div className="testimonial">
+        <p>
+          "I received solar installation training from Rab Energy Solutions and
+          was employed as a solar technician. They gave me a career path."
+        </p>
+        <h4>Kinsley Andoh</h4>
+      </div>
     </div>
   </div>
 </section>

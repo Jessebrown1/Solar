@@ -37,7 +37,7 @@
     position: relative;
     z-index: 2;
     background: rgba(255, 255, 255, 0.02);
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(1px);
     padding: 50px 25px;
     border-radius: 20px;
     max-width: 800px;
@@ -59,7 +59,7 @@
   
   .products-hero p {
     color: #e2e8f0;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     line-height: 1.6;
     max-width: 600px;
     margin: 0 auto;
@@ -195,7 +195,7 @@
     }
   
     .products-hero p {
-      font-size: 0.95rem;
+      font-size: 1.2rem;
     }
   
     .product-card h3 {

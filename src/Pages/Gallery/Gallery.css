@@ -148,7 +148,7 @@
   
   @media (max-width: 480px) {
     .gallery-hero {
-      height: 80vh;
+      height: 100vh;
     }
   
     .gallery-hero h1 {

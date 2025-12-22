@@ -93,7 +93,7 @@
     flex: 1;
     min-width: 320px;
     animation: fadeInLeft 1.2s ease-out 1.2s forwards;
-    margin-top: 4%;
+    margin-top: 8%;
   }
   
   .about-text p {

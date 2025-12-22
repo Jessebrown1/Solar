@@ -64,9 +64,10 @@ const Footer = () => {
           <div className="footer-section">
             <h4>Contact Us</h4>
             <ul className="contact-list">
-              <li><MapPin size={18} /> Tema, Accra, Ghana</li>
-              <li><Phone size={18} /> +233 552 384 351</li>
-              <li><Mail size={18} /> info@rabenergy.com</li>
+              <li><MapPin size={18} /> WH-0341-5440 St. Jude Street, Apowa Mussey, Old 
+              Police Barrier, Takoradi, Ghana </li>
+              <li><Phone size={18} /> +233 31 2293346  / +233 233480857</li>
+              <li><Mail size={18} /> info@rabenergysolutions.com, sales@rabenergysolutions.com </li>
             </ul>
           </div>
 

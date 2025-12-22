@@ -32,7 +32,7 @@
     text-align: center;
     padding: 40px;
     border-radius: 16px;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(1px);
     animation: fadeUp 1.5s ease forwards;
   }
   
@@ -45,6 +45,7 @@
   .contact-hero p {
     font-size: 1.2rem;
     opacity: 0.9;
+    color: white;
   }
   
   /* 📞 Info + Form */

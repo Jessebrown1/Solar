@@ -1,7 +1,7 @@
 import React from "react";
 import "./Gallery.css";
 
-import galleryHero from "../../assets/galleryHero.jpg";
+import galleryHero from "../../assets/galleryHero.jpeg";
 import gallery1 from "../../assets/gallery1.jpg";
 import gallery2 from "../../assets/gallery2.jpeg";
 import gallery3 from "../../assets/gallery3.jpg";
