@@ -49,6 +49,11 @@ import resolution7 from "../../assets/resolution7.jpg";
 import resolution8 from "../../assets/resolution8.jpg";
 import resolution9 from "../../assets/resolution9.jpg";
 
+
+import solarr from "../../assets/solarrr.png"
+import ev from "../../assets/ev.png"
+import ev2 from "../../assets/ev2.png"
+
 /* =======================
    DATA MODEL
 ======================= */
@@ -58,7 +63,7 @@ const productCategories = [
     icon: Sun,
     description:
       "Complete solar energy solutions including inverters, panels, batteries, and hybrid systems.",
-    image: inverter1,
+    image: solarr,
     items: [
       { name: "Solar Inverter", image: inverter1 },
       { name: "Solar Inverter", image: inverter2 },
@@ -126,9 +131,9 @@ const productCategories = [
     icon: Car,
     description:
       "Electric mobility solutions and solar-compatible charging infrastructure.",
-    image: inverter6,
+    image: ev2,
     items: [
-      { name: "Electric Pickups" },
+      { name: "Electric Pickups", image: ev },
       { name: "Electric Sedans" },
       { name: "Electric SUVs" },
       { name: "EV Chargers (Solar / Grid)" }

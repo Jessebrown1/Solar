@@ -17,6 +17,8 @@ import proj2 from "../../assets/proj2.jpeg"
 import proj3 from "../../assets/proj3.jpg"
 import avr from "../../assets/avr.jpg";
 
+import ImpactStats from "../../components/ImpactStats.jsx";
+
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -219,44 +221,8 @@ const Home = () => {
 
 
 
-<section className="solutions-section">
-  <div className="container">
-    <h2 className="section-title">Solutions & Products</h2>
-    <p className="section-subtitle">
-      Explore our range of solar solutions designed for homes, businesses, and industries.
-    </p>
+<ImpactStats />
 
-    <div className="slider-wrapper">
-      <button
-        className="arrow-btn left"
-        onClick={() =>
-          setCurrent((prev) => (prev === 0 ? products.length - 3 : prev - 1))
-        }
-      >
-        <ChevronLeft size={30} />
-      </button>
-
-      <div className="product-slider">
-        {products.slice(current, current + 3).map((product, idx) => (
-          <div className="product-card" key={idx}>
-            <img src={product.image} alt={product.title} />
-            <h3>{product.title}</h3>
-            <p>{product.desc}</p>
-          </div>
-        ))}Solar Panel Installation
-      </div>
-
-      <button
-        className="arrow-btn right"
-        onClick={() =>
-          setCurrent((prev) => (prev >= products.length - 3 ? 0 : prev + 1))
-        }
-      >
-        <ChevronRight size={30} />
-      </button>
-    </div>
-  </div>
-</section>
 
 
 

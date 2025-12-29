@@ -26,23 +26,20 @@ const Contact = () => {
 
           <div className="info-item">
             <Phone className="icon" />
-            <span>+233 55 123 4567</span>
+            <span>+233 31 2293346 / +233 233480857</span>
           </div>
 
           <div className="info-item">
             <Mail className="icon" />
-            <span>info@rabenergy.com</span>
+            <span>info@rabenergysolutions.com, sales@rabenergysolutions.com</span>
           </div>
 
           <div className="info-item">
             <MapPin className="icon" />
-            <span>Tema, Accra, Ghana</span>
+            <span>WH-0341-5440 St. Jude Street, Apowa Mussey, Old Police Barrier, Takoradi, Ghana</span>
           </div>
 
-          <div className="info-item">
-            <Clock className="icon" />
-            <span>Mon - Sat: 8:00 AM - 6:00 PM</span>
-          </div>
+          
 
           {/* 💬 WhatsApp Button */}
           <a
